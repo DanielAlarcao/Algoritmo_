@@ -2,6 +2,7 @@
     "files.associations": {
         "string.h": "c",
         "CELSUIS1.C": "cpp",
-        "CELSIUS1.C": "cpp"
+        "CELSIUS1.C": "cpp",
+        "stdio.h": "c"
     }
 }
