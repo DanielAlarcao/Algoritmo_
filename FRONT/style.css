@@ -2,45 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    margin: 0;
+    margin: 0;          
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
+    list-style: none;          /* tirar as bolinhas q ficam do lado*/
     outline: none;
     border: none;
-    text-decoration: none;
+    text-decoration: none;      /* tirar o traço q fica abaixo do link*/
+    
 }
 
 html {
     width: 100vw;
     height: 100vh;
-    font-size: 62.5%;
+    font-size: 62.5%; 
     font-family: 'Roboto Slab', serif;
-    overflow-x: hidden;
+    overflow-x: hidden;         /* nao ter barra de rolagem  horizontal*/
     scroll-behavior: smooth;
 }
 
-/* MENU */
+/* menu */                                                                                             
 
 
 
 .content {
     width: 100vw;
     height: 65px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #000000;
-    position: fixed;
+    display: flex;      /* deixar as coisas um do lado do outro*/
+    justify-content: space-around;   /* colcoar espaçamento entre os itens  */
+    align-items: center;    /*alinhar ao centro */
+    background-color: #000000;  /*cor do menu  */
+    position: fixed;        /* deixar o menu fixe em cima */
     padding-left: 20rem;
 }
 
 .logo {
     width: 65px;
     height: auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    cursor: pointer;    /*faz o cursor do mouse aparecer a maozinha */
+    display: flex;      
+    align-items: center; 
 }
 
 
@@ -61,41 +62,38 @@ html {
     width: 600px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .content .list-menu li a{
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding : 3rem 1rem 2rem 1rem;  
     color: rgb(255, 255, 255);
     font-size: 1.8rem;
-    text-transform: uppercase;
+    text-transform: uppercase;  /* deixar a letra maiuscula */
     font-weight: 500;
-    transition: all 200ms ease-in;
+    transition: all 260ms ease-in;  /* transiçao do efeito ao passar o mouse */
 }
 
-.content .list-menu li a:hover{
-    background-color: #ffffff;
-    border-bottom: 4px solid #e21111;  
-    color: #000000;
+.content .list-menu li a:hover{   /* efeito quando passa o mouse por cima */
+    background-color: #ffffff;  
+    border-bottom: 4px solid #e21111;   /* borda na parte de baixo */
+    color: #000000;          /* cor da letra */
 }
 
-/* Primeira Seção */
+
 
 .first-section{
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(rgba(54, 50, 50, 0.384), rgba(29, 29, 29, 0.8)), url(./La-Braciera_Pizza-Italiana_Neuton-Araujo.webp);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 5px;
+    background-image: linear-gradient(rgba(54, 50, 50, 0.384), rgba(29, 29, 29, 0.8)), url(./pizza.webp);  /* colocar uma cor em cima da img */
+    background-position: center center;  /* centralizar a img */
+    background-size: cover;      /* cobrir todo tela */
+    background-repeat: no-repeat;    /* para n repetir a img */
+    background-position-y: 1px;      /* baixar a img */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;     /* deixar um em cima do outro */
+    justify-content: center;    /*aliando na vertical */    
+    align-items: center;        
 }
 
 .first-section .conteudo-principal{
@@ -108,38 +106,45 @@ html {
 
 .first-section h1{
     color: #ffffff;
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;       /* distanciamento do sub titulo */
     font-family: 'Roboto Slab', serif;
 }
 
 .first-section h2{
     color: rgba(233, 224, 224, 0.74);
     font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 400;    /* grossura da fonte */
+    text-transform: uppercase; 
     font-family: 'Roboto Slab', serif;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;    
 }
 
 .btn button {
     width: 225px;
     height: 55px;
-    cursor: pointer;
+    cursor: pointer; 
     text-transform: uppercase;
     background-color: #000000;
-    border-radius: 10px;
+    border-radius: 10px;     /* deixar redando as pontas */
     color: rgb(255, 255, 255);
     font-weight: 700;
     transition: all 400ms ease-in;
-    margin-top: 5rem;
+    margin-top: 5rem;   
 }
 
-.btn button:hover {
+.btn button:hover {        
     border: 1px solid #ff0000;
-    background-color: transparent;
-    color: #ffffff;
+    background-color: transparent;  /* deixar o fonto tranparente */
+    color: #ffffff;         
+}
+
+.btn{   /* caixa da btn */
+    width: 460px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .horario {
@@ -205,6 +210,7 @@ html {
     color: #e6e6e6;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
+    
 }
 
 .itens-cardapio {
@@ -216,6 +222,9 @@ html {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    display: flex;
+    
+    
 }
 
 .itens-cardapio .info {
@@ -243,15 +252,18 @@ html {
     justify-content: center;
     align-items: center;
     grid-template-columns: 150px 150px;
-    margin-left: 6rem;
+    margin-left: 4rem;
+    
+    
 }
 
 .itens-cardapio .info h4 span{
     font-size: 1.6rem;
     color:#000000;
     margin-left: 1.5rem;
-    text-decoration: underline;
+    text-decoration: none;   /* tirar o traço q fica abaixo do link*/
     font-family: 'Roboto Slab', serif;
+    
     
 }
 
@@ -276,6 +288,7 @@ html {
     color: rgb(0, 0, 0);
     transition: all 200ms ease-in;
     font-family: 'Roboto Slab', serif;
+    
 }
 
 .itens-cardapio .info .pedir:hover {
