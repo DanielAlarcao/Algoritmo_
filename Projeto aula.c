@@ -231,7 +231,7 @@ int main() { // Ela começa declarando uma variável de caractere opcao que ser�
         printf("8. Sair\n");
 
         printf("Opção: ");
-        scanf(" %c", &opcao);
+        scanf(" %c", &opcao);  //declarada para armazenar a opção selecionada pelo usuário
 
         switch (opcao) {
             case '1':
