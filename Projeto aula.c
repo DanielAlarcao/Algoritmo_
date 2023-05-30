@@ -18,7 +18,7 @@ char sexo[MAX_USUARIOS][TAM_NOME];
 char endereco[MAX_USUARIOS][TAM_ENDERECO];
 double  altura [MAX_USUARIOS];     //double precisão para armazenar grandes números com pontos
 int vacina [MAX_USUARIOS];
-int numUsuarios = 0;
+int numUsuarios = 0; 
 
 ////////// Função para gerar um ID aleatório para cada usuário//////////////
 
@@ -34,7 +34,7 @@ void cadastrarUsuario() {  // responsavel p solicitar e armazenar as info de unm
         return;
     }
 
-    int novoId = gerarIdAleatorio(); 
+    int novoId = gerarIdAleatorio();  
 
     printf("Nome completo: ");
     scanf(" %[^\n]", nomeCompleto[numUsuarios]);
@@ -205,57 +205,14 @@ void imprimirUsuarios() {  // responsavel por exibir todos os user cadastrado. p
     }
 }
 
-//////////////////////// Função para fazer backup dos usuários cadastrados/////////////////////////////
+/////////////// backup ///////////
 
-void fazerBackup() {  // responsável por criar um arquivo de backup chamado "backup.txt" e salvar nele os dados dos usuários cadastrados.
-    FILE arquivo; //Ela começa declarando uma variável arquivo do tipo FILE e uma variável inteira 
-    int i;
+/* void fazerBackup() /*  // falta fazer 
+    
+///////////////// restauração dos dados a partir do backup////////////////////////
 
-    arquivo = fopen("backup.txt", "w"); // abre o arquivo "backup.txt" em modo de escrita ("w") usando a função fopen().
-                                        // Se ocorrer algum erro ao abrir o arquivo, é exibida uma mensagem de erro e a função retorna
-
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo de backup!\n");
-        return;
-    }
-
-    for (i = 0; i < numUsuarios; i++) {
-        fprintf(arquivo, "%d;%s;%s;%s;%s;%.2lf;%d\n",  ids[i], nomeCompleto[i], email[i],
-                sexo[i], endereco[i],  altura[i], vacina[i]);
-    }
-
-    fclose(arquivo);
-
-    printf("Backup realizado com sucesso!\n");
-}
-
-/////////////////////// Função para realizar a restauração dos dados a partir do backup////////////////////////
-
-void realizarRestauracao() { // responsável por restaurar os dados dos usuários a partir de um arquivo de backup chamado "backup.txt".
-    FILE *arquivo;
-    char linha[500];
-    int i = 0;
-
-    arquivo = fopen("backup.txt", "r");
-
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo de backup!\n");
-        return;
-    }
-
-    numUsuarios = 0;
-
-    while (fgets(linha, sizeof(linha), arquivo)) {
-        sscanf(linha, "%d;%[^;];%[^;];%[^;];%[^;];%lf;%d", & ids[i], nomeCompleto[i], email[i],
-               sexo[i], endereco[i], &altura[i], &vacina[i]);
-        i++;
-        numUsuarios++;
-    }
-
-    fclose(arquivo);
-
-    printf("Restauração concluída com sucesso! Foram recuperados %d usuários.\n", numUsuarios);
-}
+ /* void realizarRestauracao()  */  // falta fazer 
+   
 
 int main() { // Ela começa declarando uma variável de caractere opcao que será usada para armazenar a opção selecionada pelo usuário
     char opcao;
