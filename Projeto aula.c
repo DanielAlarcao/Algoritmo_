@@ -1,7 +1,7 @@
 #include <stdio.h>   // para entrada e saida
 #include <stdlib.h>   // funcoes relacionadas a alocacao de memoria 
 #include <string.h>   // ultilizada para manipulacao de strings 
-#include <time.h>      // usada para gerar valores aleatorios baseados no tempo 
+
 
 #define MAX_USUARIOS 1000
 #define TAM_EMAIL 50
@@ -11,18 +11,18 @@
 
 ////////// Vetores para armazenar os dados//////////
 
-int ids[MAX_USUARIOS];  // int números inteiros positivos e negativos
-char nomeCompleto[MAX_USUARIOS][TAM_NOME]; // char armazenar caracteres
+int ids[MAX_USUARIOS];  
+char nomeCompleto[MAX_USUARIOS][TAM_NOME]; 
 char email[MAX_USUARIOS][TAM_EMAIL];
 char sexo[MAX_USUARIOS][TAM_NOME];
 char endereco[MAX_USUARIOS][TAM_ENDERECO];
-double  altura [MAX_USUARIOS];     //double precisão para armazenar grandes números com pontos
+double  altura [MAX_USUARIOS];     
 int vacina [MAX_USUARIOS];
 int numUsuarios = 0; 
 
 ////////// Função para gerar um ID aleatório para cada usuário//////////////
 
-int gerarIdAleatorio() {      // gera um ID para cada usuario. ela usa a funcao "rand" da srdlib.b
+int gerarIdAleatorio() {      
     return rand() % 10000 + 1;   // o operador % usado p limitar o valor entre 0 e 9999 
 }
 
@@ -50,10 +50,10 @@ void cadastrarUsuario() {  // responsavel p solicitar e armazenar as info de unm
     printf("Sexo (Feminino, Masculino ou Indiferente): ");
     scanf("%s", sexo[numUsuarios]);
 
-    if (strcmp(sexo[numUsuarios], "Feminino") != 0 && strcmp(sexo[numUsuarios], "Masculino") != 0 &&   // Verifica se o sexo é válido
+    if (strcmp(sexo[numUsuarios], "Feminino") != 0 && strcmp(sexo[numUsuarios], "Masculino") != 0 &&   
         strcmp(sexo[numUsuarios], "Indiferente") != 0) {
         printf("Sexo inválido!! Insere novamente Feminino, Masculino ou Indiferente.\n");
-        return; // Encerra a função, pois o sexo é inválido
+        return; 
     }
 
     printf("Endereço: ");
@@ -62,9 +62,9 @@ void cadastrarUsuario() {  // responsavel p solicitar e armazenar as info de unm
     printf("Altura (em metros): ");
     scanf("%lf", & altura[numUsuarios]);
 
-    if ( altura[numUsuarios] < 1.0 ||  altura[numUsuarios] > 2.0) {  // Verifica se a altura é válida
+    if ( altura[numUsuarios] < 1.0 ||  altura[numUsuarios] > 2.0) {  
         printf("Altura inválida!! Digite um valor entre 1 e 2\n");
-        return; // Encerra a função, pois a altura é inválida
+        return; 
     }
 
     printf("Vacina (1 para Sim, 0 para Não): ");
@@ -78,8 +78,8 @@ void cadastrarUsuario() {  // responsavel p solicitar e armazenar as info de unm
 
 ////////////////// Função para editar os dados de um usuário///////////////////
 
-void editarUsuario() {   // inserir o email do user q desaja editar. em seguida é feita um buscar pelos user cadastrados, caso sao solicitadas novas info
-    char email[TAM_EMAIL];  // sao realizadas novas validacoes p garantir q as novas info sejam validas 
+void editarUsuario() {   // inserir o email do user q desaja editar. em seguida é feita um buscar pelos user cadastrados
+    char email[TAM_EMAIL];  
     int i; // Declaração de uma variável de controle para o loop
 
     printf("Insere o email do usuário que deseja editar: ");
@@ -133,7 +133,7 @@ void editarUsuario() {   // inserir o email do user q desaja editar. em seguida 
 
 //////////////////////// Função para excluir um usuário//////////////////////////
 
-void excluirUsuario() {  //  inserir o email do user q desaja excluir. em seguida é feita um buscar pelos user cadastrados
+void excluirUsuario() {  //  inserir o email do user q desaja excluir.
     char email[TAM_EMAIL]; // caso o user seja encontrado, todos os dados dos user seguintes sao movidos uma posicao p tras p preencher o espaco vazio do user excluido
     int i, j;
 
@@ -163,7 +163,7 @@ void excluirUsuario() {  //  inserir o email do user q desaja excluir. em seguid
 
 ////////////////////////// Função para buscar um usuário pelo email///////////////////////////
 
-void buscarUsuarioPorEmail() { //inserir o email do user q desaja ser buscado. em seguida é feita um buscar pelos user cadastrados
+void buscarUsuarioPorEmail() { //inserir o email do user q desaja ser buscado. 
     int i; // Declaração de variáveis de controle para os loops
 
     printf("Insere o email do usuário que deseja buscar: ");
@@ -217,7 +217,7 @@ void imprimirUsuarios() {  // responsavel por exibir todos os user cadastrado. p
 int main() { // Ela começa declarando uma variável de caractere opcao que será usada para armazenar a opção selecionada pelo usuário
     char opcao;
 
-    srand(time(NULL));  // é chamada para inicializar a semente do gerador de números aleatórios.
+    
 
     do {
         printf("Selecione uma opção:\n");
