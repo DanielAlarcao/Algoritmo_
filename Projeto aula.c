@@ -23,7 +23,7 @@ int numUsuarios = 0;
 ////////// Função para gerar um ID aleatório para cada usuário//////////////
 
 int gerarIdAleatorio() {      // gera um ID para cada usuario. ela usa a funcao "rand" da srdlib.b
-    return rand() % 10000 + 1;   // o operador % usado p limitar o valor entre 0 e 9999 e no final incrementado 1 p evitar IDS iguas a zero
+    return rand() % 10000 + 1;   // o operador % usado p limitar o valor entre 0 e 9999 
 }
 
 //////////////// Função para cadastrar um novo usuário//////////////////
@@ -145,12 +145,12 @@ void excluirUsuario() {  //  inserir o email do user q desaja excluir. em seguid
             // Se os emails forem iguais, significa que o usuário foi encontrado
             for (j = i; j < numUsuarios - 1; j++) {  // Deslocamento dos elementos subsequentes para preencher o espaço do usuário excluído
                  ids[j] =  ids[j + 1]; //Desloca o id do usuário
-                strcpy(nomeCompleto[j], nomeCompleto[j + 1]); // desloca o nome completo
-                strcpy(email[j], email[j + 1]); // desloca o email
-                strcpy(sexo[j], sexo[j + 1]); // desloca o sexo
-                strcpy(endereco[j], endereco[j + 1]); // desloca o entereco 
-                altura[j] =  altura[j + 1]; // Desloca a altura do usuário
-                vacina[j] = vacina[j + 1]; // Desloca a informação sobre a vacinação do usuário
+                strcpy(nomeCompleto[j], nomeCompleto[j + 1]); 
+                strcpy(email[j], email[j + 1]); 
+                strcpy(sexo[j], sexo[j + 1]); 
+                strcpy(endereco[j], endereco[j + 1]); 
+                altura[j] =  altura[j + 1]; 
+                vacina[j] = vacina[j + 1]; 
             }
             numUsuarios--;  // Decrementa o número total de usuários, pois um usuário foi excluído
             printf("Usuário excluído com sucesso!!\n"); 
@@ -205,11 +205,11 @@ void imprimirUsuarios() {  // responsavel por exibir todos os user cadastrado. p
     }
 }
 
-/////////////// backup ///////////
+//// backup ///
 
 /* void fazerBackup() /*  // falta fazer 
     
-///////////////// restauração dos dados a partir do backup////////////////////////
+//// restauração //
 
  /* void realizarRestauracao()  */  // falta fazer 
    
