@@ -1,0 +1,123 @@
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2{
+    color:#7c7b7b;
+}
+.top-bar{
+    background-color: #020202;
+    color:rgb(165, 161, 161);
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 5px solid #ffffff;
+}
+.container{
+    max-width: 888px;
+    margin: auto;
+    padding: 25px;
+
+}
+.head-line{
+    font-size:  45px;
+    line-height: 64px;
+}
+
+.sub-title{
+    font-weight: normal;
+    font-size: 23px;
+}
+a{
+    text-decoration: none;
+}
+.content{
+    width: 650px;
+    margin: auto;
+}
+p{
+    font-size: 20px;
+    line-height: 30px;
+   
+}
+
+.containerPoke{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    padding: 30px;
+    display: flex;
+    width: 800px;
+    margin-bottom: 50px;
+    border-radius: 85px;
+}
+
+.card img{
+    max-width: 300px;
+    max-height: 300px;    
+}
+
+.buba{
+    background-color: #bac555;
+}
+
+.char{
+    background-color: #706b6b;
+}
+
+
+.squi{
+    background-color: #0088ff;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.info p{
+    font-size: 25px;
+}
+
+.media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+}
+footer p{
+    color:rgb(187, 182, 182);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.scrollbutton{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+.scrollbutton img{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
